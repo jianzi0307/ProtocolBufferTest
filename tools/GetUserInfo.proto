@@ -1,0 +1,33 @@
+message GetUserInfo {
+	//用户ID
+	required string uid	= 1;
+	//用户唯一ID
+	required string uuid = 2;
+	//用户名
+	required string uname = 3;
+	//年龄
+	required int32 age = 4;
+	//性别
+	required int32 sex = 5;
+	//是否vip
+	required bool isvip = 6;
+	//vip等级
+	required int32 viplv = 7;
+	//幸运值
+	required int32 lucky = 8;
+	//灵气
+	required int32 linq = 9;
+	//猴毛
+	required int32 jling = 10;
+
+	message FrdSmpInfo {
+		required string uid = 1;
+		required string thumb = 2;
+		required int32 lv = 3;
+		required bool isvip = 4;
+		required int32 viplv = 5;
+	}
+
+	//好友列表
+	repeated FrdSmpInfo fuids = 11;
+}
